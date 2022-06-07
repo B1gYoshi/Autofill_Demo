@@ -1,6 +1,6 @@
 # Autofill_Demo
 
-# This is a sort of proof of concept/demo of a word autofill feature.
+This is a sort of proof of concept/demo of a word autofill feature.
 
 There is a file provided with 1000 frequently used english words. These words and whatever the user types are stored in a data structure called a *Trie.*
 The delimiter for the words that the user types is a space, so if the user types 'Hello, World', the program will store 'Hello,' and 'World' in the Trie.
