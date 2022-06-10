@@ -48,6 +48,8 @@ void addWord (char str[], struct node* root) {
         curr = curr->children[index];
         i++;
     }
+    curr->children[10] = newNode(0);
+    curr = curr->children[10];
     curr->isEnd = 1;
 }
 
@@ -124,6 +126,7 @@ int main() {
     struct node* root = newNode(0);
 
     //adding words from an external file to the trie
+    
     FILE *words = fopen("words.txt", "r");
 
     char fileStr[100];
@@ -131,6 +134,7 @@ int main() {
     while (fgets(fileStr, 100, words) != NULL) {
         addWord(fileStr, root);
     }
+    
 
     //kind of a demo of how the trie works--
     /*
