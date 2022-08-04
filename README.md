@@ -7,4 +7,4 @@ The delimiter for the words that the user types is a space, so if the user types
 
 Then the user can provide a prefix such as 'he' and all words in the trie beginning with 'he' will be output as options for autofill.
 
-I made this as an exercise and to plan out the logic of implementing the Trie data structure. I intend to use this to create a text editor of sorts which will have this feature. 
+I made this as an exercise and to plan out the logic of implementing the Trie data structure. 
