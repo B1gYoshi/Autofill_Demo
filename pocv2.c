@@ -120,6 +120,15 @@ void autoFill(char pref[], struct node* root) {
 
 }
 
+void freeTrie(struct node *root) {
+    for (int i = 0; i < TOT_CHAR; i++){
+        if(root->children[i]) {
+            freeTrie(root->children[i]);
+        }
+    }
+    free(root);
+}
+
 int main() {
 
     //root of the trie
@@ -132,6 +141,11 @@ int main() {
     char fileStr[100];
 
     while (fgets(fileStr, 100, words) != NULL) {
+        int i = 0;
+        while(fileStr[i] != '\0') {
+            i++;
+        }
+        fileStr[i-1] = '\0';
         addWord(fileStr, root);
     }
     
@@ -175,6 +189,8 @@ int main() {
     scanf("%s", prefix);
 
     autoFill(prefix, root);
+    
+    freeTrie(root);
 
     return 0;
 }
